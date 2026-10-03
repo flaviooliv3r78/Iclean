@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>IClean Pro - Painel da Diarista</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#faf8ff", "inverse-surface": "#283044", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#005137", "outline-variant": "#bfc7d2", "secondary-fixed-dim": "#68dba9", "surface-container-highest": "#dae2fd", "tertiary-fixed": "#ffddb8", "tertiary-container": "#a36700", "on-primary-fixed": "#001d31", "secondary-container": "#82f5c1", "tertiary": "#825100", "primary-fixed-dim": "#93ccff", "tertiary-fixed-dim": "#ffb95f", "inverse-primary": "#93ccff", "secondary": "#006c4a", "surface-container": "#eaedff", "secondary-fixed": "#85f8c4", "surface-container-low": "#f2f3ff", "outline": "#707881", "on-tertiary-fixed": "#2a1700", "primary-fixed": "#cce5ff", "on-primary-container": "#fdfcff", "on-secondary-fixed": "#002114", "surface-bright": "#faf8ff", "on-error-container": "#93000a", "surface-tint": "#006398", "primary": "#006194", "surface-variant": "#dae2fd", "on-tertiary-container": "#fffbff", "surface-container-high": "#e2e7ff", "on-surface-variant": "#3f4850", "error-container": "#ffdad6", "on-background": "#131b2e", "on-error": "#ffffff", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#653e00", "on-surface": "#131b2e", "primary-container": "#007bb9", "surface-container-lowest": "#ffffff", "background": "#faf8ff", "surface-dim": "#d2d9f4", "on-secondary-container": "#00714e", "on-primary-fixed-variant": "#004b73", "inverse-on-surface": "#eef0ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-2xl": "3rem", "gutter-desktop": "1.5rem", "space-md": "1rem", "space-xxs": "0.25rem", "container-max": "72rem", "space-xl": "2rem", "space-xs": "0.5rem", "space-sm": "0.75rem", "touch-target-min": "3.25rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "label-lg": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "display": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "body-md": ["15px", {"lineHeight": "22px", "fontWeight": "400"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "headline-sm": ["18px", {"lineHeight": "26px", "fontWeight": "600"}], "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_10px_rgba(0,0,0,0.05)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0 flex-1"><a aria-label="Perfil Dona Sônia" class="relative flex-shrink-0" data-path="perfil" href="#"><img alt="Dona Sônia" class="w-10 h-10 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1UIwfxIjDTgqs93qM1cbfjikaMyXt5gAutsy-pDT9VLRJIueDtK2BU0Ma3AsNjFYQhO8RXU7Os-b__3Wq92-N_i_5eG4fxK1HO_P8nIk-rGl65BQ8DEZUr5LyuzHgXOIgshwpaTQxk2U20cpnywd2fx-S4PUleOiRmdEdiMMxYCxqREe12ylby5bTQjjAhZpvYC3xk1-nylpSe8Zjka8betT5SypQ4sbn0Kq7XTzu030dtGhyKB_KhSDTw"/><span class="absolute bottom-0 right-0 w-3 h-3 bg-secondary rounded-full border-2 border-surface"></span></a><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="font-label-md text-label-md text-on-surface truncate leading-tight">Dona Sônia</span><span class="hidden">Início</span></div><button aria-label="Alterar disponibilidade" class="flex items-center gap-1.5 text-secondary py-0.5 max-w-full text-left" type="button"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse flex-shrink-0"></span><span class="font-label-sm text-[11px] font-semibold tracking-tight text-secondary truncate">Disponível para novos pedidos</span></button></div></div><div class="flex items-center gap-1.5 flex-shrink-0"><a aria-label="Notificações" class="w-11 h-11 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center transition-colors hover:bg-surface-container-high active:scale-95" data-path="notificacoes" href="#"><span class="material-symbols-outlined text-[22px]">notifications</span></a><a aria-label="WhatsApp Suporte" class="w-11 h-11 rounded-full bg-secondary-container/70 text-secondary flex items-center justify-center transition-colors hover:bg-secondary-container active:scale-95" data-path="suporte-whatsapp" href="#"><span class="material-symbols-outlined text-[22px]">chat</span></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full">
+<!-- BANNER AMIGÁVEL & RESUMO DO DIA -->
+<section class="px-gutter-mobile pt-space-sm pb-space-xs">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="space-y-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Bom dia, Dona Sônia!</h1>
+<span aria-hidden="true" class="text-xl select-none">✨</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+            Sua agenda no <strong class="font-label-md text-on-surface">Parque Paulista</strong> está ativa
+          </p>
+</div>
+</div>
+<!-- STATUS TOGGLE CARD -->
+<div class="mt-space-md bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="relative flex h-3.5 w-3.5 flex-shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-secondary"></span>
+</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface truncate">Recebendo novos pedidos hoje</p>
+<p class="font-label-sm text-label-sm text-secondary font-semibold">Status: Disponível no bairro</p>
+</div>
+</div>
+<button aria-checked="true" aria-label="Alternar disponibilidade de novos pedidos" class="relative inline-flex h-8 w-14 flex-shrink-0 cursor-pointer rounded-full bg-secondary transition-colors duration-200 ease-in-out focus:outline-none" id="status-toggle-btn" role="switch" type="button">
+<span class="translate-x-6 inline-block h-6 w-6 transform rounded-full bg-on-secondary shadow-md transition duration-200 ease-in-out mt-1 ml-1" id="status-toggle-knob"></span>
+</button>
+</div>
+<!-- CARDS DE METRICAS ESSENCIAIS (3 COLUNAS) -->
+<div class="grid grid-cols-3 gap-space-xs mt-space-sm">
+<div class="bg-surface-container-lowest p-space-xs rounded-lg text-center shadow-sm flex flex-col justify-center">
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Ganhos da semana</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold mt-0.5">R$ 420</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant/80 font-medium">3 faxinas</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded-lg text-center shadow-sm flex flex-col justify-center">
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Avaliação média</span>
+<div class="flex items-center justify-center gap-0.5 mt-0.5">
+<span class="material-symbols-outlined text-tertiary-container text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">4.9</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant/80 font-medium">68 clientes</span>
+</div>
+<div class="bg-surface-container-lowest p-space-xs rounded-lg text-center shadow-sm flex flex-col justify-center">
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Resposta rápida</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold mt-0.5">100%</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant/80 font-medium">Nota máxima</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ALERTA URGENTE / NOVA SOLICITAÇÃO -->
+<section class="px-gutter-mobile py-space-xs">
+<div class="bg-surface-container-highest rounded-xl p-space-md shadow-md" id="new-request-card">
+<!-- HEADER DO PEDIDO -->
+<div class="flex items-center justify-between gap-space-xs pb-space-xs">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[22px]" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+<span class="font-label-lg text-label-lg text-on-surface">Nova Solicitação</span>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">timer</span>
+          Responda em até 1h
+        </span>
+</div>
+<!-- DETALHES DO CLIENTE & SERVIÇO -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm mt-space-xxs shadow-sm">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Retrato fotográfico de Carla M., cliente sorridente e amigável em um ambiente doméstico acolhedor e iluminado por luz natural suave, estilo realista de alta qualidade." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARzsf1RBJUYqvh4xUrxyPZqkXJz6rtim905Iqts0tp5gws9RnfvdE7-1FYazaqyES9ylkfhcMKN_V2g1v3y35RJBYGGGgsHl6wfBszb_vg-7KSiWBaWMBkIKbcEDNmQWKdp59_2WHpkiTMg1_kfwzFzJp7Qz-Tx1mKirXDs3nLsQzEsWqDuxmo8GK56QlMl3G0melbd1pbf8bUytneRF7CajPq8Ca7aiQfSRS1xQCbo2K4jZDDVPyd"/>
+<div class="min-w-0 flex-1">
+<h2 class="font-label-lg text-label-lg text-on-surface truncate">Carla M.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">directions_walk</span>
+              Rua das Camélias • a 600m da sua casa
+            </p>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-space-xs mt-space-sm bg-surface-container-low p-space-xs rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<span class="font-label-md text-label-md text-on-surface">Amanhã (Quinta, 17 Out) • Manhã (08h às 12h)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">cleaning_services</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Limpeza Padrão (Casa 2 quartos, 1 banheiro)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">pets</span>
+<span class="font-label-sm text-label-sm text-on-surface">Possui 1 cachorrinho dócil no quintal</span>
+</div>
+</div>
+<!-- VALOR LÍQUIDO EM DESTAQUE -->
+<div class="mt-space-sm flex items-center justify-between bg-secondary-container/40 p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Valor líquido a receber:</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold leading-tight">R$ 140,00</span>
+</div>
+<span class="bg-secondary text-on-secondary font-label-sm text-[11px] px-2 py-0.5 rounded-full font-semibold">Pix após o serviço</span>
+</div>
+</div>
+<!-- BOTÕES DE DECISÃO ULTRA LEGÍVEIS -->
+<div class="mt-space-sm flex flex-col gap-space-xs">
+<button class="w-full min-h-touch-target-min bg-secondary text-on-secondary font-label-lg text-label-lg rounded-xl shadow-md hover:bg-secondary/95 active:scale-[0.98] transition-all flex items-center justify-center gap-2 px-space-md" id="btn-accept-request" type="button">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+<span>Aceitar Faxina (R$ 140)</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="min-h-touch-target-min bg-surface-container-lowest text-error font-label-md text-label-md rounded-xl shadow-sm hover:bg-error-container active:scale-[0.98] transition-all flex items-center justify-center gap-1.5" id="btn-reject-request" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+<span>Recusar</span>
+</button>
+<button class="min-h-touch-target-min bg-surface-container-lowest text-primary font-label-md text-label-md rounded-xl shadow-sm hover:bg-primary-fixed active:scale-[0.98] transition-all flex items-center justify-center gap-1" id="btn-details-modal" type="button">
+<span class="material-symbols-outlined text-[20px]">info</span>
+<span>Ver Detalhes</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- PRÓXIMA FAXINA CONFIRMADA (HOJE) -->
+<section class="px-gutter-mobile py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Hoje à Tarde</h2>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] font-bold px-2 py-0.5 rounded-full">
+          Confirmadíssima
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-sm mt-space-xxs">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded-full object-cover shadow-sm flex-shrink-0" data-alt="Foto amigável de perfil de Roberto S., homem maduro de meia idade com expressão calorosa e confiável, fundo claro e nítido de apartamento residencial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0v9qCglRdzCaYPg9asY76Zl4j7rr0AaIJrm90einWSXcdhpb9bwzzdnYWxqeVNUWOqSKxddD7UcpLwGz2HFY_i1xFIOq1cmfAq7RSY0dhKsp0QxhGzLTgwTTdM1NDzq1AdJ2XAz21H57dKnWvqx6Q9qbHIvcUixogSuhvH6tOk8I9qXCTFm6Yqr5UdFbyKZXsBdcawMTPIrhvqM3GKcFLplAUgxAFZcg1QppeAkUpU6NKQGw7DsjB"/>
+<div class="min-w-0 flex-1">
+<h3 class="font-label-lg text-label-lg text-on-surface truncate">Roberto S.</h3>
+<p class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+              Hoje • 13h30 às 17h30 (4 horas)
+            </p>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs space-y-1.5">
+<p class="font-body-md text-body-md text-on-surface flex items-start gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0 mt-0.5">pin_drop</span>
+<span>Rua Acácias, 240 - Apto 32 • Parque Paulista</span>
+</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1.5 pl-6">
+<span class="material-symbols-outlined text-secondary text-[16px]">directions_walk</span>
+            Apenas 12 minutos a pé da sua casa
+          </p>
+</div>
+<!-- AÇÕES RÁPIDAS DA FAXINA DE HOJE -->
+<div class="mt-space-md flex flex-col gap-space-xs">
+<button class="w-full min-h-touch-target-min bg-primary text-on-primary font-label-lg text-label-lg rounded-xl shadow-md hover:bg-primary-container active:scale-[0.98] transition-all flex items-center justify-center gap-2" id="btn-arrived" type="button">
+<span class="material-symbols-outlined text-[24px]">apartment</span>
+<span id="arrived-btn-text">Marcar "Cheguei no Prédio"</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<a class="min-h-touch-target-min bg-secondary text-on-secondary font-label-md text-label-md rounded-xl shadow-sm hover:opacity-95 active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 px-space-xs" href="https://wa.me/5511999999999?text=Ol%C3%A1%20Roberto,%20aqui%20%C3%A9%20a%20Dona%20S%C3%B4nia%20da%20IClean!" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>WhatsApp</span>
+</a>
+<button class="min-h-touch-target-min bg-surface-container-highest text-on-surface font-label-md text-label-md rounded-xl shadow-sm hover:bg-surface-container-high active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 px-space-xs" id="btn-open-map" type="button">
+<span class="material-symbols-outlined text-primary text-[20px]">map</span>
+<span>Ver Trajeto</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AGENDA RESUMIDA DA SEMANA -->
+<section class="px-gutter-mobile py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">date_range</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Sua Semana</h2>
+</div>
+<a class="font-label-md text-label-md text-primary font-bold" data-path="agenda" href="#">Ver mês</a>
+</div>
+<!-- LISTA DE DIAS EM CARDS VERTICAIS ACESSÍVEIS -->
+<div class="space-y-space-xs">
+<!-- QUARTA (HOJE) -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-high">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-primary text-on-primary flex flex-col items-center justify-center flex-shrink-0">
+<span class="font-label-sm text-[10px] uppercase font-bold">Hoje</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">16</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface truncate">Quarta-feira</p>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">1 faxina à tarde (Roberto S.)</p>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-[11px] px-2 py-0.5 rounded-full font-semibold">Ocupado</span>
+</div>
+<!-- QUINTA -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container text-on-surface flex flex-col items-center justify-center flex-shrink-0">
+<span class="font-label-sm text-[10px] uppercase font-semibold">Qui</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">17</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface truncate">Quinta-feira</p>
+<p class="font-body-md text-body-md text-tertiary-container font-semibold truncate">1 solicitação aguardando resposta</p>
+</div>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] px-2 py-0.5 rounded-full font-semibold">Pendente</span>
+</div>
+<!-- SEXTA -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container text-on-surface flex flex-col items-center justify-center flex-shrink-0">
+<span class="font-label-sm text-[10px] uppercase font-semibold">Sex</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">18</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface truncate">Sexta-feira</p>
+<p class="font-body-md text-body-md text-secondary truncate">Dia livre • Disponível para pedidos</p>
+</div>
+</div>
+<button class="text-primary font-label-sm text-label-sm font-bold px-2 py-1 rounded bg-surface-container-lowest" onclick="alert('Dia 18 de Outubro reservado para seu descanso ou novos agendamentos!')" type="button">
+            Folgar?
+          </button>
+</div>
+<!-- SÁBADO -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container text-on-surface flex flex-col items-center justify-center flex-shrink-0">
+<span class="font-label-sm text-[10px] uppercase font-semibold">Sáb</span>
+<span class="font-headline-sm text-headline-sm font-bold leading-none">19</span>
+</div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface truncate">Sábado</p>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">1 faxina confirmada de manhã</p>
+</div>
+</div>
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-[11px] px-2 py-0.5 rounded-full font-semibold">Manhã</span>
+</div>
+</div>
+<!-- BOTÃO DE CONFIGURAR DIAS LIVRES -->
+<button class="mt-space-sm w-full min-h-touch-target-min bg-surface-container text-primary font-label-md text-label-md rounded-xl hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2" onclick="alert('Abrindo tela para ajustar seus dias de folga e horários de trabalho.')" type="button">
+<span class="material-symbols-outlined text-[20px]">edit_calendar</span>
+<span>Ajustar meus dias e horários livres</span>
+</button>
+</div>
+</section>
+<!-- SUPORTE & TRANQUILIDADE FINANCEIRA -->
+<section class="px-gutter-mobile pt-space-xs pb-space-lg">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface">Pagamento 100% Garantido</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A IClean repassa seu valor no mesmo dia da faxina.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">support_agent</span>
+<span class="font-label-md text-label-md text-on-surface">Precisa de ajuda ou teve imprevisto?</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+          Nossa equipe no Parque Paulista atende você pelo WhatsApp com todo carinho e rapidez.
+        </p>
+<a class="w-full min-h-touch-target-min bg-secondary text-on-secondary font-label-md text-label-md rounded-xl shadow-sm hover:opacity-95 active:scale-[0.98] transition-all flex items-center justify-center gap-2 mt-1" href="https://wa.me/5511888888888?text=Ol%C3%A1%20Equipe%20IClean,%20sou%20a%20Dona%20S%C3%B4nia%20e%20preciso%20de%20um%20suporte." target="_blank">
+<span class="material-symbols-outlined text-[22px]">chat</span>
+<span>Falar com o Suporte IClean no WhatsApp</span>
+</a>
+</div>
+</div>
+</section>
+<!-- MODAL INFORMATIVO DE DETALHES DO PEDIDO (OCULTO POR PADRÃO) -->
+<div class="fixed inset-0 bg-inverse-surface/60 backdrop-blur-sm z-50 hidden flex items-end justify-center" id="details-backdrop">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-2xl p-space-md max-h-[751px] overflow-y-auto shadow-xl space-y-space-md">
+<div class="flex items-center justify-between pb-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Detalhes do Pedido de Carla</h3>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface" id="btn-close-modal" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<div class="space-y-space-xs text-on-surface">
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Endereço Completo</p>
+<p class="font-label-md text-label-md text-on-surface">Rua das Camélias, 118, Casa 2</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Ponto de referência: Próximo à Padaria do Seu Zé (600 metros de caminhada tranquila).</p>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<p class="font-label-sm text-label-sm text-on-surface-variant">O que a cliente solicitou</p>
+<ul class="font-body-md text-body-md list-disc list-inside mt-1 space-y-1">
+<li>Limpeza geral do chão e pó dos móveis</li>
+<li>Higienização completa do banheiro</li>
+<li>Troca de roupas de cama nos 2 quartos</li>
+<li>Produtos de limpeza já estão na casa</li>
+</ul>
+</div>
+<div class="bg-secondary-container/30 p-space-sm rounded-lg flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Seu ganho garantido:</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold">R$ 140,00</span>
+</div>
+</div>
+<button class="w-full min-h-touch-target-min bg-secondary text-on-secondary font-label-lg text-label-lg rounded-xl shadow-md flex items-center justify-center gap-2" id="btn-modal-accept" type="button">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+<span>Aceitar esta Faxina Agora</span>
+</button>
+</div>
+</div>
+<!-- TOAST FEEDBACK FLUTUANTE -->
+<div class="fixed top-20 left-4 right-4 z-50 transform -translate-y-28 transition-transform duration-300 pointer-events-none" id="toast-message">
+<div class="bg-inverse-surface text-inverse-on-surface p-space-sm rounded-xl shadow-xl flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]" id="toast-icon">check_circle</span>
+<span class="font-label-md text-label-md flex-1" id="toast-text">Ação concluída com sucesso!</span>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Referências DOM
+    const statusBtn = document.getElementById('status-toggle-btn');
+    const statusKnob = document.getElementById('status-toggle-knob');
+    const btnAccept = document.getElementById('btn-accept-request');
+    const btnReject = document.getElementById('btn-reject-request');
+    const newRequestCard = document.getElementById('new-request-card');
+    const btnArrived = document.getElementById('btn-arrived');
+    const arrivedText = document.getElementById('arrived-btn-text');
+    const btnDetails = document.getElementById('btn-details-modal');
+    const btnCloseModal = document.getElementById('btn-close-modal');
+    const modalAccept = document.getElementById('btn-modal-accept');
+    const detailsModal = document.getElementById('details-backdrop');
+    const toast = document.getElementById('toast-message');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+
+    function showToast(msg, icon = 'check_circle') {
+      if (!toast) return;
+      toastText.textContent = msg;
+      toastIcon.textContent = icon;
+      toast.classList.remove('-translate-y-28');
+      toast.classList.add('translate-y-0');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0');
+        toast.classList.add('-translate-y-28');
+      }, 3200);
+    }
+
+    // Alternar disponibilidade
+    let isAvailable = true;
+    if (statusBtn && statusKnob) {
+      statusBtn.addEventListener('click', () => {
+        isAvailable = !isAvailable;
+        if (isAvailable) {
+          statusBtn.classList.remove('bg-outline-variant');
+          statusBtn.classList.add('bg-secondary');
+          statusKnob.classList.remove('translate-x-1');
+          statusKnob.classList.add('translate-x-6');
+          statusBtn.setAttribute('aria-checked', 'true');
+          showToast('Você está DISPONÍVEL para novos pedidos no Parque Paulista!');
+        } else {
+          statusBtn.classList.remove('bg-secondary');
+          statusBtn.classList.add('bg-outline-variant');
+          statusKnob.classList.remove('translate-x-6');
+          statusKnob.classList.add('translate-x-1');
+          statusBtn.setAttribute('aria-checked', 'false');
+          showToast('Status pausado. Novos clientes verão você ocupada.', 'pause_circle');
+        }
+      });
+    }
+
+    // Ações de Aceite de Pedido
+    function handleAcceptOrder() {
+      if (newRequestCard) {
+        newRequestCard.innerHTML = `
+          <div class="bg-secondary-container/50 text-on-secondary-container p-space-md rounded-xl text-center space-y-2">
+            <span class="material-symbols-outlined text-[44px] text-secondary">celebration</span>
+            <h3 class="font-headline-sm text-headline-sm font-bold">Parabéns, Dona Sônia!</h3>
+            <p class="font-body-md text-body-md">Você aceitou a faxina de Carla M. para amanhã às 08h. O valor de R$ 140,00 foi reservado na sua agenda.</p>
+            <div class="pt-2">
+              <span class="inline-block bg-secondary text-on-secondary font-label-md text-label-md px-4 py-2 rounded-lg">Pedido adicionado na sua Agenda</span>
+            </div>
+          </div>
+        `;
+      }
+      showToast('Pedido aceito com sucesso! Carla foi notificada.');
+      if (detailsModal) detailsModal.classList.add('hidden');
+    }
+
+    if (btnAccept) btnAccept.addEventListener('click', handleAcceptOrder);
+    if (modalAccept) modalAccept.addEventListener('click', handleAcceptOrder);
+
+    // Recusar
+    if (btnReject) {
+      btnReject.addEventListener('click', () => {
+        if (confirm('Deseja recusar esta solicitação? Ela será repassada para outra diarista parceira.')) {
+          if (newRequestCard) {
+            newRequestCard.innerHTML = `
+              <div class="p-space-md text-center bg-surface-container-low rounded-xl">
+                <p class="font-body-md text-body-md text-on-surface-variant">Solicitação dispensada. Novas oportunidades aparecerão aqui assim que surgirem.</p>
+              </div>
+            `;
+          }
+          showToast('Pedido dispensado.', 'info');
+        }
+      });
+    }
+
+    // Modal de Detalhes
+    if (btnDetails && detailsModal && btnCloseModal) {
+      btnDetails.addEventListener('click', () => {
+        detailsModal.classList.remove('hidden');
+      });
+      btnCloseModal.addEventListener('click', () => {
+        detailsModal.classList.add('hidden');
+      });
+      detailsModal.addEventListener('click', (e) => {
+        if (e.target === detailsModal) detailsModal.classList.add('hidden');
+      });
+    }
+
+    // Notificar Chegada no Imóvel
+    let hasArrived = false;
+    if (btnArrived && arrivedText) {
+      btnArrived.addEventListener('click', () => {
+        if (!hasArrived) {
+          hasArrived = true;
+          btnArrived.classList.remove('bg-primary');
+          btnArrived.classList.add('bg-secondary');
+          arrivedText.textContent = '✓ Presença Confirmada no Roberto!';
+          showToast('Excelente! Roberto foi avisado pelo app que você chegou.', 'verified');
+        } else {
+          showToast('Você já confirmou sua chegada para esta faxina.');
+        }
+      });
+    }
+
+    // Botão de Mapa
+    const btnMap = document.getElementById('btn-open-map');
+    if (btnMap) {
+      btnMap.addEventListener('click', () => {
+        window.open('https://maps.google.com/?q=Rua+Acacias+240+Parque+Paulista', '_blank');
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-touch-target-min text-on-surface-variant transition-colors hover:text-on-surface" data-path="inicio" href="#"><span class="material-symbols-outlined text-[24px]">assignment</span><span class="font-label-sm text-label-sm">Pedidos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-touch-target-min text-on-surface-variant transition-colors hover:text-on-surface" data-path="agenda" href="#"><span class="material-symbols-outlined text-[24px]">calendar_month</span><span class="font-label-sm text-label-sm">Agenda</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-touch-target-min text-on-surface-variant transition-colors hover:text-on-surface" data-path="meus-ganhos" href="#"><span class="material-symbols-outlined text-[24px]">payments</span><span class="font-label-sm text-label-sm">Meus Ganhos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-touch-target-min text-on-surface-variant transition-colors hover:text-on-surface" data-path="perfil" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm">Perfil</span></a></div></nav></body></html>

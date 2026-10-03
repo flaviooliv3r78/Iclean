@@ -1,0 +1,1274 @@
+**/node_modules/
+**/.expo/
+**/dist/
+**/web-build/
+.env
+.env.*
+!.env.example
+*.jks<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      name="viewport"
+    />
+    <title>IClean</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              surface: "#faf8ff",
+              "inverse-surface": "#283044",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed-variant": "#005137",
+              "outline-variant": "#bfc7d2",
+              "secondary-fixed-dim": "#68dba9",
+              "surface-container-highest": "#dae2fd",
+              "tertiary-fixed": "#ffddb8",
+              "tertiary-container": "#a36700",
+              "on-primary-fixed": "#001d31",
+              "secondary-container": "#82f5c1",
+              tertiary: "#825100",
+              "primary-fixed-dim": "#93ccff",
+              "tertiary-fixed-dim": "#ffb95f",
+              "inverse-primary": "#93ccff",
+              secondary: "#006c4a",
+              "surface-container": "#eaedff",
+              "secondary-fixed": "#85f8c4",
+              "surface-container-low": "#f2f3ff",
+              outline: "#707881",
+              "on-tertiary-fixed": "#2a1700",
+              "primary-fixed": "#cce5ff",
+              "on-primary-container": "#fdfcff",
+              "on-secondary-fixed": "#002114",
+              "surface-bright": "#faf8ff",
+              "on-error-container": "#93000a",
+              "surface-tint": "#006398",
+              primary: "#006194",
+              "surface-variant": "#dae2fd",
+              "on-tertiary-container": "#fffbff",
+              "surface-container-high": "#e2e7ff",
+              "on-surface-variant": "#3f4850",
+              "error-container": "#ffdad6",
+              "on-background": "#131b2e",
+              "on-error": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              error: "#ba1a1a",
+              "on-tertiary-fixed-variant": "#653e00",
+              "on-surface": "#131b2e",
+              "primary-container": "#007bb9",
+              "surface-container-lowest": "#ffffff",
+              background: "#faf8ff",
+              "surface-dim": "#d2d9f4",
+              "on-secondary-container": "#00714e",
+              "on-primary-fixed-variant": "#004b73",
+              "inverse-on-surface": "#eef0ff",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "space-lg": "1.5rem",
+              "gutter-mobile": "1rem",
+              "space-2xl": "3rem",
+              "gutter-desktop": "1.5rem",
+              "space-md": "1rem",
+              "space-xxs": "0.25rem",
+              "container-max": "72rem",
+              "space-xl": "2rem",
+              "space-xs": "0.5rem",
+              "space-sm": "0.75rem",
+              "touch-target-min": "3.25rem",
+            },
+            fontFamily: {
+              "label-sm": ["Plus Jakarta Sans"],
+              "label-md": ["Plus Jakarta Sans"],
+              "headline-md": ["Plus Jakarta Sans"],
+              "label-lg": ["Plus Jakarta Sans"],
+              display: ["Plus Jakarta Sans"],
+              "body-md": ["Plus Jakarta Sans"],
+              "body-lg": ["Plus Jakarta Sans"],
+              "headline-lg-mobile": ["Plus Jakarta Sans"],
+              "headline-sm": ["Plus Jakarta Sans"],
+              "headline-lg": ["Plus Jakarta Sans"],
+            },
+            fontSize: {
+              "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+              "label-md": ["14px", { lineHeight: "20px", fontWeight: "600" }],
+              "headline-md": [
+                "20px",
+                { lineHeight: "28px", fontWeight: "600" },
+              ],
+              "label-lg": ["16px", { lineHeight: "24px", fontWeight: "600" }],
+              display: [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "800",
+                },
+              ],
+              "body-md": ["15px", { lineHeight: "22px", fontWeight: "400" }],
+              "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "headline-lg-mobile": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "18px",
+                { lineHeight: "26px", fontWeight: "600" },
+              ],
+              "headline-lg": [
+                "28px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "700",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"
+  >
+    <header
+      class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"
+    >
+      <div
+        class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"
+      >
+        <div class="flex items-center gap-space-xs min-w-0 flex-1">
+          <img
+            alt="Logotipo IClean"
+            class="h-8 w-auto object-contain flex-shrink-0"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1XNFYZgowmXuz7AY_D-crmlPDiXLoZiUdr7fTKrZuQnpnQYE9T1kLzkoLgSTxKoO6QJMZktNYkz4-dhdhFzrAdnyuOEiCHvryZyYVbwp8smZjxubep9Q-2JqZA3ofn9uYKyMcwFHUebDfm4uY5ttjmztcWWGC-5I8K8IPPyE2JRdgsWEYymQepSx2VLIlH1Ep6bn-dg7hJVM2K95rFwFPBVNVD3vfpjW5Z4NossLTErD1RIKeDomiGfmpo"
+          />
+          <div class="flex flex-col min-w-0">
+            <div class="flex items-center gap-1 text-on-surface">
+              <span
+                class="font-headline-sm text-headline-sm tracking-tight truncate"
+                >IClean</span
+              ><span class="hidden">Início</span>
+            </div>
+            <div
+              class="flex items-center gap-0.5 text-on-surface-variant truncate"
+            >
+              <span
+                class="material-symbols-outlined text-[14px] text-primary flex-shrink-0"
+                >location_on</span
+              ><span class="font-label-sm text-label-sm truncate"
+                >Parque Paulista, Francisco Morato</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-space-xs flex-shrink-0">
+          <a
+            aria-label="Suporte WhatsApp"
+            class="w-11 h-11 rounded-full bg-secondary-container/60 text-secondary flex items-center justify-center transition-colors hover:bg-secondary-container active:scale-95"
+            data-path="suporte-whatsapp"
+            href="#"
+            ><span class="material-symbols-outlined text-[22px]">chat</span></a
+          ><a
+            aria-label="Meu Perfil"
+            class="w-11 h-11 flex items-center justify-center p-0.5 rounded-full hover:opacity-90 active:scale-95 transition-transform"
+            data-path="perfil"
+            href="#"
+            ><img
+              alt="Profile"
+              class="w-8 h-8 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMvn8zCqZPtlS6ciF3gbhwkQnVMWiNdLayCTVv5DvYPhh0Hq0_XjvvrVwNHk5Umis3EudJQtqYTCLa8AEJ4_sadf4EAe-MGqPDQretIK_KFWGkmldNZxi7R0O7Vj-xb59F0o7gjEMHgde9ljtAbXz5la7fl3BSJWRcZ_eU1J50vErUebFG7UbXATYO1nToSEZI0V7tM0rgf8BJZHt_l4iLwJTzH7EzQWRUI1xZRR_ygvKIkZ-UzdLt"
+          /></a>
+        </div>
+      </div>
+    </header>
+    <main class="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-surface">
+      <div class="flex flex-col w-full">
+        <!-- Top Ambient Glow -->
+        <div
+          class="relative w-full px-gutter-mobile pt-space-xs pb-space-lg flex flex-col gap-space-md overflow-hidden"
+        >
+          <div
+            class="absolute -top-16 -right-16 w-56 h-56 bg-primary-fixed/40 rounded-full blur-3xl pointer-events-none"
+          ></div>
+          <div
+            class="absolute top-40 -left-12 w-48 h-48 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none"
+          ></div>
+          <!-- Micro Badge Pill -->
+          <div
+            class="inline-flex items-center gap-1.5 self-start px-space-xs py-1 rounded-full bg-surface-container-low text-primary shadow-sm"
+          >
+            <span
+              class="material-symbols-outlined text-[16px] text-tertiary-container animate-pulse"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >auto_awesome</span
+            >
+            <span class="font-label-sm text-label-sm"
+              >Limpeza descomplicada perto de você</span
+            >
+          </div>
+          <!-- Hero Content -->
+          <div class="flex flex-col gap-space-xs relative z-10">
+            <h1
+              class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight"
+            >
+              Sua casa limpa, seu tempo de volta.
+            </h1>
+            <p
+              class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+            >
+              Encontre profissionais de confiança no seu bairro para cuidar da
+              sua casa sem complicação e com valor justo.
+            </p>
+          </div>
+          <!-- Visual Anchor Showcase Tile -->
+          <div
+            class="relative w-full h-44 rounded-xl overflow-hidden shadow-md bg-surface-container"
+          >
+            <img
+              class="w-full h-full object-cover"
+              data-alt="A brightly lit, freshly organized living room in an authentic Brazilian suburban home with sunlight streaming through a clean window, neatly arranged sofa cushions, polished tiled floor reflecting warm natural light, potted tropical plants, clean, inviting, uplifting domestic harmony."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAda98uPtxGxqvjJdXdsV2xdqXe12sbknpx3voSyautyiaZLD4XHc0Qa0MBlM8IrdC8q8lbs6DwTW1Rf8LeqB1WzdpIXmr1onI1WDZvLF8bxrTXzAA_qt0MuX3M2Y_mysfBj20HvsTR5of-rLn9cJTOAG7HIsQb1DGt_VD_jO5pjEzelU_ZHJxvnYYwPFXYqEEmlkCeuETWERyOfAuGhJoYTUKcUwvHgprvKR6VR2ci4n4C6flh4jg7"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent flex items-end p-space-sm"
+            >
+              <div class="flex items-center gap-2 text-on-primary">
+                <div
+                  class="w-8 h-8 rounded-full bg-secondary-container text-secondary flex items-center justify-center"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >verified</span
+                  >
+                </div>
+                <div>
+                  <p
+                    class="font-label-md text-label-md leading-tight text-surface"
+                  >
+                    Profissionais da sua rua
+                  </p>
+                  <p
+                    class="font-label-sm text-label-sm text-surface-variant opacity-90"
+                  >
+                    Checadas com carinho e documento
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mini Search & Quick Action Box (Level 2 Elevation Card) -->
+          <div
+            class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-md relative z-10"
+            id="simulador-limpeza"
+          >
+            <!-- Cabeçalho do Simulador -->
+            <div
+              class="flex flex-col gap-1 border-b border-surface-container pb-space-xs"
+            >
+              <div class="flex items-center justify-between gap-1 flex-wrap">
+                <span
+                  class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider"
+                  >Cálculo Instantâneo</span
+                >
+                <span
+                  class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container/60 text-secondary text-label-sm font-semibold"
+                >
+                  <span class="material-symbols-outlined text-[14px]"
+                    >verified</span
+                  >
+                  Sem compromisso
+                </span>
+              </div>
+              <h2
+                class="font-headline-sm text-headline-sm text-on-surface font-bold"
+              >
+                Simule sua limpeza em 30s
+              </h2>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant leading-tight"
+              >
+                Valores justos e transparentes calculados para o seu lar.
+              </p>
+            </div>
+
+            <!-- 1. Bairro de Atendimento -->
+            <div class="flex flex-col gap-1">
+              <div class="flex items-center justify-between">
+                <label
+                  class="font-label-sm text-label-sm text-on-surface-variant font-medium"
+                  >Bairro de atendimento</label
+                >
+                <span
+                  class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-0.5"
+                >
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"
+                  ></span>
+                  Diaristas disponíveis hoje
+                </span>
+              </div>
+              <div
+                class="flex items-center gap-2 px-space-sm py-2.5 rounded-lg bg-surface-container-low text-on-surface border border-outline-variant/30"
+              >
+                <span class="material-symbols-outlined text-primary text-[20px]"
+                  >location_on</span
+                >
+                <div class="flex-1 min-w-0">
+                  <span
+                    class="font-label-md text-label-md block font-medium truncate"
+                    >Parque Paulista, Francisco Morato</span
+                  >
+                </div>
+                <span
+                  class="material-symbols-outlined text-on-surface-variant text-[18px]"
+                  >expand_more</span
+                >
+              </div>
+            </div>
+
+            <!-- 2. Tipo de Imóvel -->
+            <div class="flex flex-col gap-1.5">
+              <label
+                class="font-label-sm text-label-sm text-on-surface-variant font-medium"
+                >Tipo de imóvel</label
+              >
+              <div class="grid grid-cols-3 gap-1.5" id="property-type-selector">
+                <button
+                  type="button"
+                  onclick="selectPropertyType(this)"
+                  class="prop-type-btn flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm shadow-sm transition-all border border-primary/20"
+                  data-type="casa"
+                >
+                  <span class="material-symbols-outlined text-[20px] mb-0.5"
+                    >home</span
+                  >
+                  <span class="font-semibold">Casa</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="selectPropertyType(this)"
+                  class="prop-type-btn flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm transition-all border border-transparent"
+                  data-type="apto"
+                >
+                  <span class="material-symbols-outlined text-[20px] mb-0.5"
+                    >apartment</span
+                  >
+                  <span class="font-semibold">Apto</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="selectPropertyType(this)"
+                  class="prop-type-btn flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm transition-all border border-transparent"
+                  data-type="sobrado"
+                >
+                  <span class="material-symbols-outlined text-[20px] mb-0.5"
+                    >villa</span
+                  >
+                  <span class="font-semibold">Sobrado</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 3. Contadores Quartos e Banheiros -->
+            <div class="grid grid-cols-2 gap-space-xs">
+              <!-- Quartos -->
+              <div
+                class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1 border border-outline-variant/20"
+              >
+                <span
+                  class="font-label-sm text-label-sm text-on-surface-variant font-medium flex items-center gap-1"
+                >
+                  <span
+                    class="material-symbols-outlined text-[16px] text-primary"
+                    >bed</span
+                  >
+                  Quartos
+                </span>
+                <div class="flex items-center justify-between pt-0.5">
+                  <button
+                    type="button"
+                    onclick="updateCounter('rooms', -1)"
+                    class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface font-bold flex items-center justify-center shadow-sm active:scale-95 transition-transform"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >remove</span
+                    >
+                  </button>
+                  <span
+                    id="counter-rooms"
+                    class="font-label-lg text-label-lg font-bold text-on-surface min-w-[20px] text-center"
+                    >2</span
+                  >
+                  <button
+                    type="button"
+                    onclick="updateCounter('rooms', 1)"
+                    class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface font-bold flex items-center justify-center shadow-sm active:scale-95 transition-transform"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >add</span
+                    >
+                  </button>
+                </div>
+              </div>
+              <!-- Banheiros -->
+              <div
+                class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1 border border-outline-variant/20"
+              >
+                <span
+                  class="font-label-sm text-label-sm text-on-surface-variant font-medium flex items-center gap-1"
+                >
+                  <span
+                    class="material-symbols-outlined text-[16px] text-secondary"
+                    >shower</span
+                  >
+                  Banheiros
+                </span>
+                <div class="flex items-center justify-between pt-0.5">
+                  <button
+                    type="button"
+                    onclick="updateCounter('baths', -1)"
+                    class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface font-bold flex items-center justify-center shadow-sm active:scale-95 transition-transform"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >remove</span
+                    >
+                  </button>
+                  <span
+                    id="counter-baths"
+                    class="font-label-lg text-label-lg font-bold text-on-surface min-w-[20px] text-center"
+                    >1</span
+                  >
+                  <button
+                    type="button"
+                    onclick="updateCounter('baths', 1)"
+                    class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface font-bold flex items-center justify-center shadow-sm active:scale-95 transition-transform"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >add</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Tipo de Faxina -->
+            <div class="flex flex-col gap-1.5">
+              <label
+                class="font-label-sm text-label-sm text-on-surface-variant font-medium"
+                >Tipo de faxina</label
+              >
+              <div class="grid grid-cols-1 gap-1.5" id="cleaning-type-selector">
+                <button
+                  type="button"
+                  onclick="selectCleaningType(this, 130, '4h a 5h')"
+                  class="clean-type-btn p-2.5 rounded-lg bg-primary-fixed/40 border-2 border-primary text-left transition-all flex items-start gap-2.5"
+                  data-clean="padrao"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px] mt-0.5"
+                    >cleaning_services</span
+                  >
+                  <div class="flex flex-col flex-1 min-w-0">
+                    <div class="flex items-center justify-between">
+                      <span
+                        class="font-label-md text-label-md font-bold text-on-surface"
+                        >Padrão (Manutenção)</span
+                      >
+                      <span
+                        class="font-label-sm text-label-sm text-primary font-bold"
+                        >Mais pedida</span
+                      >
+                    </div>
+                    <p
+                      class="font-body-md text-[13px] text-on-surface-variant leading-tight"
+                    >
+                      Poeira, pisos, vidros internos, banheiros, louça e
+                      lixeiras.
+                    </p>
+                  </div>
+                </button>
+                <button
+                  type="button"
+                  onclick="selectCleaningType(this, 180, '6h a 8h')"
+                  class="clean-type-btn p-2.5 rounded-lg bg-surface-container-low border-2 border-transparent text-left transition-all flex items-start gap-2.5"
+                  data-clean="pesada"
+                >
+                  <span
+                    class="material-symbols-outlined text-on-surface-variant text-[20px] mt-0.5"
+                    >sanitizer</span
+                  >
+                  <div class="flex flex-col flex-1 min-w-0">
+                    <div class="flex items-center justify-between">
+                      <span
+                        class="font-label-md text-label-md font-bold text-on-surface"
+                        >Completa / Pesada</span
+                      >
+                      <span
+                        class="font-label-sm text-label-sm text-tertiary-container font-semibold"
+                        >Profunda</span
+                      >
+                    </div>
+                    <p
+                      class="font-body-md text-[13px] text-on-surface-variant leading-tight"
+                    >
+                      Desengorduramento de cozinha, azulejos, rodapés e
+                      armários.
+                    </p>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <!-- 5. Frequência com tags de desconto -->
+            <div class="flex flex-col gap-1.5">
+              <label
+                class="font-label-sm text-label-sm text-on-surface-variant font-medium"
+                >Frequência</label
+              >
+              <div class="grid grid-cols-3 gap-1.5" id="frequency-selector">
+                <button
+                  type="button"
+                  onclick="selectFrequency(this, 0)"
+                  class="freq-btn flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low border border-transparent text-on-surface-variant transition-all"
+                  data-freq="avulsa"
+                >
+                  <span class="font-label-sm text-label-sm font-semibold"
+                    >Avulsa</span
+                  >
+                  <span
+                    class="text-[11px] text-on-surface-variant opacity-80 mt-0.5"
+                    >Sem plano</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  onclick="selectFrequency(this, 10)"
+                  class="freq-btn flex flex-col items-center justify-center p-2 rounded-lg bg-secondary-container/40 border border-secondary text-secondary transition-all shadow-sm"
+                  data-freq="semanal"
+                >
+                  <span class="font-label-sm text-label-sm font-bold"
+                    >Semanal</span
+                  >
+                  <span
+                    class="text-[11px] font-bold text-secondary mt-0.5 bg-secondary-container px-1 rounded"
+                    >10% OFF</span
+                  >
+                </button>
+                <button
+                  type="button"
+                  onclick="selectFrequency(this, 5)"
+                  class="freq-btn flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low border border-transparent text-on-surface-variant transition-all"
+                  data-freq="quinzenal"
+                >
+                  <span class="font-label-sm text-label-sm font-semibold"
+                    >Quinzenal</span
+                  >
+                  <span
+                    class="text-[11px] font-semibold text-secondary-fixed-variant mt-0.5"
+                    >5% OFF</span
+                  >
+                </button>
+              </div>
+            </div>
+
+            <!-- 6. Card Destacado de Estimativa de Valor em Tempo Real -->
+            <div
+              class="rounded-xl bg-gradient-to-br from-surface-container-high to-surface-container p-space-sm border border-primary/20 flex flex-col gap-2"
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <span
+                    class="font-label-sm text-label-sm text-on-surface-variant block"
+                    >Investimento estimado</span
+                  >
+                  <div class="flex items-baseline gap-1.5">
+                    <span
+                      class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary"
+                      id="calc-price"
+                      >R$ 130</span
+                    >
+                    <span
+                      class="font-label-sm text-label-sm text-on-surface-variant"
+                      >/ diária média</span
+                    >
+                  </div>
+                </div>
+                <div class="text-right">
+                  <span
+                    class="font-label-sm text-label-sm text-on-surface-variant block"
+                    >Duração média</span
+                  >
+                  <span
+                    class="font-label-md text-label-md font-bold text-on-surface flex items-center justify-end gap-1"
+                    id="calc-time"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[16px] text-primary"
+                      >schedule</span
+                    >
+                    Aprox. 4h a 5h
+                  </span>
+                </div>
+              </div>
+              <div
+                class="flex items-center justify-between border-t border-outline-variant/30 pt-1.5 text-label-sm"
+              >
+                <span
+                  class="text-secondary font-semibold flex items-center gap-1"
+                  id="calc-discount-badge"
+                >
+                  <span class="material-symbols-outlined text-[16px]"
+                    >savings</span
+                  >
+                  Desconto de 10% aplicado no plano semanal
+                </span>
+                <span class="text-on-surface-variant">Parque Paulista</span>
+              </div>
+            </div>
+
+            <!-- 7. Botão CTA Principal Largo -->
+            <div class="flex flex-col gap-space-xs">
+              <a
+                class="w-full h-touch-target-min rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-md shadow-primary/25 active:scale-[0.98] transition-transform"
+                data-path="pedir-limpeza"
+                href="../solicitar_limpeza_iclean_mobile/code.html"
+              >
+                <span class="">Encontrar Diaristas Disponíveis</span>
+                <span class="material-symbols-outlined text-[20px]"
+                  >arrow_forward</span
+                >
+              </a>
+              <!-- Selo de micro-garantias -->
+              <p
+                class="font-label-sm text-[12px] text-center text-on-surface-variant leading-tight"
+              >
+                Pague só após a faxina • 100% checadas • Sem taxas surpresa
+              </p>
+              <!-- Botão Secundário Quero Trabalhar -->
+              <a
+                class="w-full h-11 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md flex items-center justify-center gap-1.5 active:bg-surface-container mt-1"
+                data-path="cadastro-diarista"
+                href="../login_e_acesso_iclean_mobile/code.html"
+              >
+                <span class="material-symbols-outlined text-[18px]">work</span>
+                <span class="">Quero trabalhar com a IClean</span>
+              </a>
+            </div>
+
+            <!-- Social Trust Barometer -->
+            <div
+              class="flex items-center justify-center gap-2 pt-0.5 border-t border-surface-container"
+            >
+              <div class="flex items-center text-tertiary-container">
+                <span
+                  class="material-symbols-outlined text-[18px]"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span class="font-label-md text-label-md ml-1 font-bold"
+                  >4.9</span
+                >
+              </div>
+              <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant"
+                >100% checadas e da sua região</span
+              >
+            </div>
+          </div>
+
+          <script>
+            let baseRate = 130;
+            let currentRooms = 2;
+            let currentBaths = 1;
+            let currentDiscount = 10;
+            let currentDuration = "4h a 5h";
+
+            function calculateTotal() {
+              let roomsExtra = Math.max(0, currentRooms - 2) * 15;
+              let bathsExtra = Math.max(0, currentBaths - 1) * 20;
+              let subtotal = baseRate + roomsExtra + bathsExtra;
+              let discountVal = (subtotal * currentDiscount) / 100;
+              let total = Math.round(subtotal - discountVal);
+
+              const priceEl = document.getElementById("calc-price");
+              if (priceEl) priceEl.innerText = "R$ " + total;
+
+              const timeEl = document.getElementById("calc-time");
+              if (timeEl)
+                timeEl.innerHTML =
+                  '<span class="material-symbols-outlined text-[16px] text-primary">schedule</span> Aprox. ' +
+                  currentDuration;
+
+              const badgeEl = document.getElementById("calc-discount-badge");
+              if (badgeEl) {
+                if (currentDiscount > 0) {
+                  badgeEl.innerHTML =
+                    '<span class="material-symbols-outlined text-[16px]">savings</span> Desconto de ' +
+                    currentDiscount +
+                    "% aplicado";
+                  badgeEl.style.display = "flex";
+                } else {
+                  badgeEl.innerHTML =
+                    '<span class="material-symbols-outlined text-[16px]">task_alt</span> Valor avulso sem fidelidade';
+                }
+              }
+            }
+
+            function updateCounter(type, change) {
+              if (type === "rooms") {
+                currentRooms = Math.max(1, Math.min(8, currentRooms + change));
+                const el = document.getElementById("counter-rooms");
+                if (el) el.innerText = currentRooms;
+              } else if (type === "baths") {
+                currentBaths = Math.max(1, Math.min(6, currentBaths + change));
+                const el = document.getElementById("counter-baths");
+                if (el) el.innerText = currentBaths;
+              }
+              calculateTotal();
+            }
+
+            function selectPropertyType(btn) {
+              document.querySelectorAll(".prop-type-btn").forEach((b) => {
+                b.className =
+                  "prop-type-btn flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm transition-all border border-transparent";
+              });
+              btn.className =
+                "prop-type-btn flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm shadow-sm transition-all border border-primary/20";
+            }
+
+            function selectCleaningType(btn, rate, duration) {
+              baseRate = rate;
+              currentDuration = duration;
+              document.querySelectorAll(".clean-type-btn").forEach((b) => {
+                b.className =
+                  "clean-type-btn p-2.5 rounded-lg bg-surface-container-low border-2 border-transparent text-left transition-all flex items-start gap-2.5";
+                const icon = b.querySelector(".material-symbols-outlined");
+                if (icon)
+                  icon.className =
+                    "material-symbols-outlined text-on-surface-variant text-[20px] mt-0.5";
+              });
+              btn.className =
+                "clean-type-btn p-2.5 rounded-lg bg-primary-fixed/40 border-2 border-primary text-left transition-all flex items-start gap-2.5";
+              const icon = btn.querySelector(".material-symbols-outlined");
+              if (icon)
+                icon.className =
+                  "material-symbols-outlined text-primary text-[20px] mt-0.5";
+              calculateTotal();
+            }
+
+            function selectFrequency(btn, discount) {
+              currentDiscount = discount;
+              document.querySelectorAll(".freq-btn").forEach((b) => {
+                b.className =
+                  "freq-btn flex flex-col items-center justify-center p-2 rounded-lg bg-surface-container-low border border-transparent text-on-surface-variant transition-all";
+              });
+              btn.className =
+                "freq-btn flex flex-col items-center justify-center p-2 rounded-lg bg-secondary-container/40 border border-secondary text-secondary transition-all shadow-sm";
+              calculateTotal();
+            }
+          </script>
+        </div>
+        <!-- Real Benefits Section -->
+        <section
+          class="w-full px-gutter-mobile py-space-md bg-surface-container-low flex flex-col gap-space-md"
+        >
+          <div class="flex flex-col gap-1">
+            <span
+              class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider"
+              >Feito pro seu dia a dia</span
+            >
+            <h2 class="font-headline-sm text-headline-sm text-on-surface">
+              Vantagens de escolher quem mora perto
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 gap-space-xs">
+            <!-- Advantage 1 -->
+            <div
+              class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start gap-space-sm"
+            >
+              <div
+                class="w-12 h-12 rounded-lg bg-secondary-container/60 text-secondary flex items-center justify-center flex-shrink-0"
+              >
+                <span class="material-symbols-outlined text-[26px]"
+                  >payments</span
+                >
+              </div>
+              <div class="flex flex-col min-w-0">
+                <h3 class="font-label-lg text-label-lg text-on-surface">
+                  Sem surpresas no valor
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Preço combinado antes de começar. Sem taxas escondidas de
+                  cancelamento ou extras inesperados.
+                </p>
+              </div>
+            </div>
+            <!-- Advantage 2 -->
+            <div
+              class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start gap-space-sm"
+            >
+              <div
+                class="w-12 h-12 rounded-lg bg-primary-fixed text-primary flex items-center justify-center flex-shrink-0"
+              >
+                <span class="material-symbols-outlined text-[26px]"
+                  >directions_walk</span
+                >
+              </div>
+              <div class="flex flex-col min-w-0">
+                <h3 class="font-label-lg text-label-lg text-on-surface">
+                  Gente do Parque Paulista
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Menos tempo no ônibus significa pontualidade garantida e apoio
+                  à renda das famílias locais.
+                </p>
+              </div>
+            </div>
+            <!-- Advantage 3 -->
+            <div
+              class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-start gap-space-sm"
+            >
+              <div
+                class="w-12 h-12 rounded-lg bg-tertiary-fixed text-tertiary flex items-center justify-center flex-shrink-0"
+              >
+                <span class="material-symbols-outlined text-[26px]"
+                  >verified_user</span
+                >
+              </div>
+              <div class="flex flex-col min-w-0">
+                <h3 class="font-label-lg text-label-lg text-on-surface">
+                  Segurança e respeito mútuo
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Documentos conferidos, referências de outros vizinhos e
+                  suporte dedicado pelo WhatsApp.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- How It Works: 3 Simple Steps -->
+        <section
+          class="w-full px-gutter-mobile py-space-xl flex flex-col gap-space-md"
+        >
+          <div class="flex flex-col gap-1">
+            <span
+              class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider"
+              >Passo a passo fácil</span
+            >
+            <h2 class="font-headline-sm text-headline-sm text-on-surface">
+              Como a IClean funciona
+            </h2>
+          </div>
+          <div class="relative flex flex-col gap-space-sm">
+            <!-- Step 1 -->
+            <div
+              class="relative flex items-center gap-space-sm p-space-sm bg-surface-container-lowest rounded-xl shadow-sm"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center flex-shrink-0"
+              >
+                1
+              </div>
+              <div class="flex flex-col min-w-0 flex-1">
+                <h3 class="font-label-md text-label-md text-on-surface">
+                  Conte como é sua casa
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Informe quantos cômodos e escolha a data e o turno ideal.
+                </p>
+              </div>
+              <span
+                class="material-symbols-outlined text-outline-variant text-[20px]"
+                >cottage</span
+              >
+            </div>
+            <!-- Step 2 -->
+            <div
+              class="relative flex items-center gap-space-sm p-space-sm bg-surface-container-lowest rounded-xl shadow-sm"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center flex-shrink-0"
+              >
+                2
+              </div>
+              <div class="flex flex-col min-w-0 flex-1">
+                <h3 class="font-label-md text-label-md text-on-surface">
+                  Escolha a profissional
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Veja perfil com foto, depoimentos de vizinhos e avaliações.
+                </p>
+              </div>
+              <span
+                class="material-symbols-outlined text-outline-variant text-[20px]"
+                >face</span
+              >
+            </div>
+            <!-- Step 3 -->
+            <div
+              class="relative flex items-center gap-space-sm p-space-sm bg-surface-container-lowest rounded-xl shadow-sm"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-secondary text-on-secondary font-bold flex items-center justify-center flex-shrink-0"
+              >
+                3
+              </div>
+              <div class="flex flex-col min-w-0 flex-1">
+                <h3 class="font-label-md text-label-md text-on-surface">
+                  Casa limpa e cheirosa
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Aproveite seu descanso sem dor de cabeça e avalie no app.
+                </p>
+              </div>
+              <span class="material-symbols-outlined text-secondary text-[20px]"
+                >sentiment_very_satisfied</span
+              >
+            </div>
+          </div>
+        </section>
+        <!-- Local Neighbor Testimonial -->
+        <section class="w-full px-gutter-mobile py-space-md">
+          <div
+            class="bg-gradient-to-br from-surface-container to-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden"
+          >
+            <span
+              class="material-symbols-outlined text-primary/15 text-[96px] absolute -bottom-6 -right-4 select-none pointer-events-none"
+              >format_quote</span
+            >
+            <div class="flex items-center gap-1 text-tertiary-container">
+              <span
+                class="material-symbols-outlined text-[16px]"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-[16px]"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-[16px]"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-[16px]"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined text-[16px]"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+            </div>
+            <p
+              class="font-body-lg text-body-lg text-on-surface italic leading-relaxed"
+            >
+              “Depois de um dia cansativo de trem, chegar em casa com tudo
+              organizado, cheiro de limpeza e o chão brilhando não tem preço!
+              Atendimento impecável da Dona Sônia.”
+            </p>
+            <div class="flex items-center gap-3 pt-2">
+              <img
+                class="w-11 h-11 rounded-full object-cover shadow-sm"
+                data-alt="Warm candid portrait photo of a smiling Brazilian woman in her 30s standing in front of a warm sunny home patio in Francisco Morato, casual authentic neighborhood atmosphere, cheerful expression, genuine and trustworthy."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-62B_MIdHPOpL7eO3BiuDpIuMqk30wSpFIZ0lb8CdM7iPFhaaeWUnwbIc0rx1hEDYd9H-uo4HMfZnqL5AgTm4Aky6h4XJj3NhA5JUOk4WBI4YHmkbolXjZqqr1w6qQ7PksbhIkH5pF3y946KycR7L0NT48LCNCOTNG2RWG5WB0yebHWCRSeR0tjqdoOWv5_pst5rMkubPX7OXxF6hKtv4bmPlYJ3gRLpr9iLlTdL2jqNqhDahDgx5"
+              />
+              <div class="flex flex-col">
+                <span
+                  class="font-label-md text-label-md text-on-surface font-bold"
+                  >Juliana M.</span
+                >
+                <span
+                  class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5"
+                >
+                  <span
+                    class="material-symbols-outlined text-[14px] text-primary"
+                    >location_on</span
+                  >
+                  Moradora do Parque Paulista
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Cleaners Showcase Mini Banner -->
+        <section class="w-full px-gutter-mobile py-space-sm">
+          <div
+            class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm"
+          >
+            <div class="flex flex-col min-w-0">
+              <div class="flex items-center gap-1.5 mb-1">
+                <span
+                  class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"
+                ></span>
+                <span
+                  class="font-label-sm text-label-sm text-secondary font-bold"
+                  >8 diaristas ativas</span
+                >
+              </div>
+              <p
+                class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate"
+              >
+                Prontas nesta semana
+              </p>
+              <p class="font-label-sm text-label-sm text-on-surface-variant">
+                Próximas da Estação Morato
+              </p>
+            </div>
+            <div class="flex -space-x-3 overflow-hidden flex-shrink-0">
+              <img
+                class="inline-block h-10 w-10 rounded-full ring-2 ring-surface-container-lowest object-cover"
+                data-alt="Friendly mature Latina professional cleaner with tidy apron smiling warmly, natural morning daylight, positive and reliable service provider headshot."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoU0nHaLfGyEkerGdZgExQgg_ENgUAdHE-1czLzqyqj4iahk0olc-Riy8OXzIG7BKTrfL91GHg5pEkjNsaAkUB23fHxcp4vgwFavpAAAt2q7mhIMrU-GmKlauMwIzybLHBUNFtPagSeKjlOfpLBmtZMw168uHi1Dr2sE_jKGbyl-vqN7rmz34BXdF1_l7YHISHuVienPVowwFytzYrhn41ahrQTNfptnyiE6e5SNfy3LQts1u_tHev"
+              />
+              <img
+                class="inline-block h-10 w-10 rounded-full ring-2 ring-surface-container-lowest object-cover"
+                data-alt="Courteous young Brazilian professional domestic cleaner with hair tied neatly, wearing blue polo shirt, warm approachable smile, authentic community feel."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI8PySvu1r6Yzl6JB06yvYEEcUia8p_ObkNQcQOOCgxU0Kn_09VCCchtWP_J237mbjIvbPYVzcOWUpiUhO1To-9gS4Tsfr2zEk1B2xVQ6X4tFEYCaasRjGC7-O05LI_P4GDtFgMgWmLraenfZeBkOcjyrumNui3-gmWkIzXzuQn693nghzWa5dbo61iA3lC-ztLwwHPGBwKRqNM8rH_9C1KrgK_4h42DnHMIy_CtFb8Qbec9_H9KaB"
+              />
+              <div
+                class="w-10 h-10 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-label-sm text-label-sm font-bold ring-2 ring-surface-container-lowest"
+              >
+                +5
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- FAQ Accordion -->
+        <section
+          class="w-full px-gutter-mobile py-space-md flex flex-col gap-space-sm"
+        >
+          <div class="flex flex-col gap-1">
+            <span
+              class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider"
+              >Sem mistério</span
+            >
+            <h2 class="font-headline-sm text-headline-sm text-on-surface">
+              Dúvidas Frequentes
+            </h2>
+          </div>
+          <div class="flex flex-col gap-space-xs" id="faq-container">
+            <!-- Item 1 -->
+            <div
+              class="faq-item bg-surface-container-lowest rounded-xl p-space-sm shadow-sm transition-all duration-200 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between gap-space-xs">
+                <span
+                  class="font-label-md text-label-md text-on-surface font-medium"
+                  >Preciso fornecer produtos de limpeza?</span
+                >
+                <span
+                  class="material-symbols-outlined text-on-surface-variant faq-icon transition-transform text-[20px]"
+                  >add</span
+                >
+              </div>
+              <div
+                class="faq-answer hidden pt-space-xs text-on-surface-variant font-body-md text-body-md leading-relaxed"
+              >
+                Geralmente sim! Balde, vassoura, panos e os produtos de sua
+                preferência (como desinfetante e sabão). Caso queira que a
+                profissional leve os materiais básicos, basta marcar a opção
+                adicional ao solicitar.
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div
+              class="faq-item bg-surface-container-lowest rounded-xl p-space-sm shadow-sm transition-all duration-200 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between gap-space-xs">
+                <span
+                  class="font-label-md text-label-md text-on-surface font-medium"
+                  >Como faço para pagar?</span
+                >
+                <span
+                  class="material-symbols-outlined text-on-surface-variant faq-icon transition-transform text-[20px]"
+                  >add</span
+                >
+              </div>
+              <div
+                class="faq-answer hidden pt-space-xs text-on-surface-variant font-body-md text-body-md leading-relaxed"
+              >
+                Você pode pagar direto pelo app com Pix ou Cartão de Crédito. O
+                valor só é repassado à profissional depois que a limpeza for
+                finalizada e aprovada por você!
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div
+              class="faq-item bg-surface-container-lowest rounded-xl p-space-sm shadow-sm transition-all duration-200 cursor-pointer"
+              onclick="toggleFaq(this)"
+            >
+              <div class="flex items-center justify-between gap-space-xs">
+                <span
+                  class="font-label-md text-label-md text-on-surface font-medium"
+                  >E se eu precisar reagendar?</span
+                >
+                <span
+                  class="material-symbols-outlined text-on-surface-variant faq-icon transition-transform text-[20px]"
+                  >add</span
+                >
+              </div>
+              <div
+                class="faq-answer hidden pt-space-xs text-on-surface-variant font-body-md text-body-md leading-relaxed"
+              >
+                Imprevistos acontecem! Você pode reagendar sem custo até 24
+                horas antes do início agendado, tudo direto no aplicativo ou com
+                o nosso suporte de WhatsApp.
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Direct WhatsApp Support Banner -->
+        <section class="w-full px-gutter-mobile pt-space-xs pb-space-lg">
+          <div
+            class="bg-secondary-container/40 rounded-xl p-space-md flex flex-col gap-space-sm items-center text-center shadow-sm"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-md"
+            >
+              <span class="material-symbols-outlined text-[30px]">chat</span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <h3
+                class="font-headline-sm text-headline-sm text-on-surface font-bold"
+              >
+                Prefere falar por mensagem?
+              </h3>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-xs"
+              >
+                Tire dúvidas e agende sua diarista direto no WhatsApp com nossa
+                equipe do Parque Paulista.
+              </p>
+            </div>
+            <a
+              class="w-full h-touch-target-min rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-md active:opacity-90 transition-opacity"
+              href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20limpeza%20no%20Parque%20Paulista"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <span class="material-symbols-outlined text-[22px]">forum</span>
+              <span class="">Chamar no WhatsApp</span>
+            </a>
+            <span
+              class="font-label-sm text-label-sm text-on-secondary-container font-medium"
+              >Atendimento humanizado das 7h às 20h</span
+            >
+          </div>
+        </section>
+        <!-- Script for local UI micro-interactions -->
+        <script>
+          function toggleFaq(card) {
+            const answer = card.querySelector(".faq-answer");
+            const icon = card.querySelector(".faq-icon");
+            const isClosed = answer.classList.contains("hidden");
+
+            // Close all in container
+            document
+              .querySelectorAll("#faq-container .faq-answer")
+              .forEach((el) => el.classList.add("hidden"));
+            document
+              .querySelectorAll("#faq-container .faq-icon")
+              .forEach((el) => (el.innerText = "add"));
+
+            if (isClosed) {
+              answer.classList.remove("hidden");
+              icon.innerText = "remove";
+            }
+          }
+
+          // Toggle service pill selection
+          document.querySelectorAll(".service-pill-btn").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              document.querySelectorAll(".service-pill-btn").forEach((b) => {
+                b.setAttribute("data-selected", "false");
+                b.className =
+                  "service-pill-btn flex items-center justify-center gap-1.5 py-2.5 px-space-xs rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md transition-all";
+              });
+              btn.setAttribute("data-selected", "true");
+              btn.className =
+                "service-pill-btn flex items-center justify-center gap-1.5 py-2.5 px-space-xs rounded-lg bg-primary-fixed text-on-primary-fixed font-label-md text-label-md shadow-sm transition-all";
+            });
+          });
+        </script>
+      </div>
+    </main>
+    <nav
+      class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]"
+      data-active-classes="text-primary font-bold"
+    >
+      <div class="flex justify-around items-center h-16 px-space-xs">
+        <a
+          class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-touch-target-min text-on-surface-variant transition-colors hover:text-on-surface"
+          data-path="inicio"
+          href="code.html"
+          ><span class="material-symbols-outlined text-[24px]">home</span
+          ><span class="font-label-sm text-label-sm">Início</span></a
+        ><a
+          class="flex flex-col items-center justify-center -mt-5"
+          data-path="pedir-limpeza"
+          href="../solicitar_limpeza_iclean_mobile/code.html"
+          ><div
+            class="w-14 h-14 rounded-full bg-primary text-on-primary shadow-lg shadow-primary/30 flex items-center justify-center transition-transform active:scale-95 hover:bg-primary-container"
+          >
+            <span class="material-symbols-outlined text-[28px]">add_task</span>
+          </div>
+          <span
+            class="font-label-sm text-label-sm text-primary font-semibold mt-1"
+            >Pedir</span
+          ></a
+        ><a
+          class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-touch-target-min text-on-surface-variant transition-colors hover:text-on-surface"
+          data-path="minhas-limpezas"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]"
+            >cleaning_services</span
+          ><span class="font-label-sm text-label-sm">Limpezas</span></a
+        ><a
+          class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-touch-target-min text-on-surface-variant transition-colors hover:text-on-surface"
+          data-path="perfil"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]">person</span
+          ><span class="font-label-sm text-label-sm">Perfil</span></a
+        >
+      </div>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><title>IClean</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface": "#faf8ff", "inverse-surface": "#283044", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#005137", "outline-variant": "#bfc7d2", "secondary-fixed-dim": "#68dba9", "surface-container-highest": "#dae2fd", "tertiary-fixed": "#ffddb8", "tertiary-container": "#a36700", "on-primary-fixed": "#001d31", "secondary-container": "#82f5c1", "tertiary": "#825100", "primary-fixed-dim": "#93ccff", "tertiary-fixed-dim": "#ffb95f", "inverse-primary": "#93ccff", "secondary": "#006c4a", "surface-container": "#eaedff", "secondary-fixed": "#85f8c4", "surface-container-low": "#f2f3ff", "outline": "#707881", "on-tertiary-fixed": "#2a1700", "primary-fixed": "#cce5ff", "on-primary-container": "#fdfcff", "on-secondary-fixed": "#002114", "surface-bright": "#faf8ff", "on-error-container": "#93000a", "surface-tint": "#006398", "primary": "#006194", "surface-variant": "#dae2fd", "on-tertiary-container": "#fffbff", "surface-container-high": "#e2e7ff", "on-surface-variant": "#3f4850", "error-container": "#ffdad6", "on-background": "#131b2e", "on-error": "#ffffff", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#653e00", "on-surface": "#131b2e", "primary-container": "#007bb9", "surface-container-lowest": "#ffffff", "background": "#faf8ff", "surface-dim": "#d2d9f4", "on-secondary-container": "#00714e", "on-primary-fixed-variant": "#004b73", "inverse-on-surface": "#eef0ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-2xl": "3rem", "gutter-desktop": "1.5rem", "space-md": "1rem", "space-xxs": "0.25rem", "container-max": "72rem", "space-xl": "2rem", "space-xs": "0.5rem", "space-sm": "0.75rem", "touch-target-min": "3.25rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}], "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "label-lg": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "display": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "body-md": ["15px", {"lineHeight": "22px", "fontWeight": "400"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "headline-sm": ["18px", {"lineHeight": "26px", "fontWeight": "600"}], "headline-lg": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs min-w-0 flex-1"><img alt="Logotipo IClean" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XNFYZgowmXuz7AY_D-crmlPDiXLoZiUdr7fTKrZuQnpnQYE9T1kLzkoLgSTxKoO6QJMZktNYkz4-dhdhFzrAdnyuOEiCHvryZyYVbwp8smZjxubep9Q-2JqZA3ofn9uYKyMcwFHUebDfm4uY5ttjmztcWWGC-5I8K8IPPyE2JRdgsWEYymQepSx2VLIlH1Ep6bn-dg7hJVM2K95rFwFPBVNVD3vfpjW5Z4NossLTErD1RIKeDomiGfmpo"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1 text-on-surface"><span class="font-headline-sm text-headline-sm tracking-tight truncate">IClean</span><span class="hidden">Pedir Limpeza</span></div><div class="flex items-center gap-0.5 text-on-surface-variant truncate"><span class="material-symbols-outlined text-[14px] text-primary flex-shrink-0">location_on</span><span class="font-label-sm text-label-sm truncate">Parque Paulista, Francisco Morato</span></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><a aria-label="Suporte WhatsApp" class="w-11 h-11 rounded-full bg-secondary-container/60 text-secondary flex items-center justify-center transition-colors hover:bg-secondary-container active:scale-95" data-path="suporte-whatsapp" href="#"><span class="material-symbols-outlined text-[22px]">chat</span></a><a aria-label="Meu Perfil" class="w-11 h-11 flex items-center justify-center p-0.5 rounded-full hover:opacity-90 active:scale-95 transition-transform" data-path="perfil" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMvn8zCqZPtlS6ciF3gbhwkQnVMWiNdLayCTVv5DvYPhh0Hq0_XjvvrVwNHk5Umis3EudJQtqYTCLa8AEJ4_sadf4EAe-MGqPDQretIK_KFWGkmldNZxi7R0O7Vj-xb59F0o7gjEMHgde9ljtAbXz5la7fl3BSJWRcZ_eU1J50vErUebFG7UbXATYO1nToSEZI0V7tM0rgf8BJZHt_l4iLwJTzH7EzQWRUI1xZRR_ygvKIkZ-UzdLt"/></a></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-28 bg-surface"><div class="flex flex-col w-full pb-8">
+<!-- Top Progress Bar & Step Tracker -->
+<div class="px-gutter-mobile pt-2 pb-4">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-wide uppercase flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        Passo 1 de 2: Detalhes do seu lar
+      </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">50% pronto</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500 ease-out" style="width: 50%;"></div>
+</div>
+</div>
+<!-- Warm Conversational Header -->
+<div class="px-gutter-mobile mb-5">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-extrabold tracking-tight">
+      Vamos agendar sua limpeza ✨
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+      Leva menos de 2 minutos para encontrar quem cuida com carinho do seu lar.
+    </p>
+</div>
+<form class="flex flex-col gap-6 px-gutter-mobile" onsubmit="event.preventDefault();">
+<!-- 1. ONDE SERÁ A LIMPEZA -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<label class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">pin_drop</span>
+          Onde será o atendimento?
+        </label>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/50 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Atendimento ativo
+        </span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] flex-shrink-0">apartment</span>
+<div class="min-w-0 flex-1">
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Região atendida</span>
+<span class="block font-label-md text-label-md text-on-surface font-bold truncate">Parque Paulista, Francisco Morato</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="address-input">
+          Rua e Número da residência <span class="text-error">*</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full min-h-touch-target-min px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-highest transition-colors placeholder:text-outline" id="address-input" placeholder="Ex: Rua das Flores, 120 - Bloco B" type="text" value="Rua das Acácias, 240"/>
+<span class="material-symbols-outlined absolute right-3 text-secondary text-[22px]">check_circle</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+          Seu endereço fica visível apenas para a profissional confirmada.
+        </p>
+</div>
+</section>
+<!-- 2. TAMANHO DA RESIDÊNCIA -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">home_work</span>
+          Tamanho do imóvel
+        </h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+          Para estimarmos o tempo ideal e número de profissionais.
+        </p>
+</div>
+<!-- Tipo de moradia chips -->
+<div>
+<span class="block font-label-md text-label-md text-on-surface mb-2 font-semibold">Tipo de espaço:</span>
+<div class="grid grid-cols-3 gap-2" id="property-type-selector">
+<button class="property-pill flex flex-col items-center justify-center p-3 rounded-xl min-h-touch-target-min bg-primary text-on-primary font-label-md text-label-md shadow-sm active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px] mb-1">cottage</span>
+            Casa
+          </button>
+<button class="property-pill flex flex-col items-center justify-center p-3 rounded-xl min-h-touch-target-min bg-surface-container-low text-on-surface-variant font-label-md text-label-md active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px] mb-1">apartment</span>
+            Apartamento
+          </button>
+<button class="property-pill flex flex-col items-center justify-center p-3 rounded-xl min-h-touch-target-min bg-surface-container-low text-on-surface-variant font-label-md text-label-md active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[24px] mb-1">domain</span>
+            Sobrado
+          </button>
+</div>
+</div>
+<!-- Steppers: Quartos e Banheiros -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+<!-- Quartos -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">bed</span>
+</div>
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-bold">Quartos</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">e salas</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container text-on-surface font-bold flex items-center justify-center active:scale-90 transition-transform" id="btn-minus-rooms" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold w-6 text-center" id="room-count">2</span>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center active:scale-90 transition-transform" id="btn-plus-rooms" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+<!-- Banheiros -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[22px]">bathtub</span>
+</div>
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-bold">Banheiros</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">ou lavabos</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container text-on-surface font-bold flex items-center justify-center active:scale-90 transition-transform" id="btn-minus-baths" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold w-6 text-center" id="bath-count">1</span>
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center active:scale-90 transition-transform" id="btn-plus-baths" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. TIPO DE SERVIÇO DESEJADO -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">mop</span>
+          Tipo de serviço
+        </h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+          Escolha o nível de intensidade que você precisa hoje.
+        </p>
+</div>
+<div class="flex flex-col gap-3" id="service-type-container">
+<!-- Card 1: Padrão (Selecionado) -->
+<div class="service-card p-4 rounded-xl bg-primary-fixed/20 shadow-sm cursor-pointer transition-all active:scale-[0.99] relative overflow-hidden" data-service="padrao">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-md shadow-primary/20">
+<span class="material-symbols-outlined text-[24px]">cleaning_services</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Limpeza Padrão</span>
+<span class="px-2 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm text-[11px] font-bold">Mais pedido</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Dia a dia e manutenção</span>
+</div>
+</div>
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 text-[13px] leading-snug">
+            Varrição cuidadosa, pano de chão com desinfetante, pó dos móveis, limpeza de pia, louça rápida, banheiro higienizado e arrumação de camas.
+          </p>
+</div>
+<!-- Card 2: Pesada -->
+<div class="service-card p-4 rounded-xl bg-surface-container-low cursor-pointer transition-all active:scale-[0.99] relative overflow-hidden" data-service="pesada">
+<div class="flex items-start justify-between gap-3">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">sanitizer</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Faxina Completa / Pesada</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Ideal para pós-mudança ou mês cheio</span>
+</div>
+</div>
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center opacity-40">
+<span class="material-symbols-outlined text-[18px]">circle</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-3 text-[13px] leading-snug">
+            Tudo da padrão + azulejos esfregados, interior de geladeira e armários sob pedido, caixilhos, janelas e remoção de gorduras impregnadas.
+          </p>
+</div>
+</div>
+</section>
+<!-- 4. DATA E TURNO DE PREFERÊNCIA -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">calendar_month</span>
+          Quando prefere receber?
+        </h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+          Selecione o melhor dia e período para sua rotina.
+        </p>
+</div>
+<!-- Carrossel de datas com rolagem suave horizontal -->
+<div class="flex items-center gap-2.5 overflow-x-auto pb-2 -mx-1 px-1 scroll-smooth">
+<!-- Dia 1 -->
+<button class="date-btn flex-shrink-0 flex flex-col items-center justify-center w-[84px] py-3 rounded-xl bg-surface-container-low text-on-surface font-semibold active:scale-95 transition-all" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hoje</span>
+<span class="font-headline-sm text-headline-sm font-bold my-0.5">14</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Out</span>
+</button>
+<!-- Dia 2 (Recomendado/Ativo) -->
+<button class="date-btn flex-shrink-0 flex flex-col items-center justify-center w-[98px] py-3 rounded-xl bg-primary text-on-primary font-semibold shadow-md shadow-primary/20 active:scale-95 transition-all relative" type="button">
+<span class="absolute -top-2 bg-secondary text-on-secondary text-[10px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
+            Recomendado
+          </span>
+<span class="font-label-sm text-label-sm text-primary-fixed">Amanhã</span>
+<span class="font-headline-sm text-headline-sm font-extrabold my-0.5">15</span>
+<span class="font-label-sm text-label-sm text-primary-fixed">Out</span>
+</button>
+<!-- Dia 3 -->
+<button class="date-btn flex-shrink-0 flex flex-col items-center justify-center w-[84px] py-3 rounded-xl bg-surface-container-low text-on-surface font-semibold active:scale-95 transition-all" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Quarta</span>
+<span class="font-headline-sm text-headline-sm font-bold my-0.5">16</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Out</span>
+</button>
+<!-- Dia 4 -->
+<button class="date-btn flex-shrink-0 flex flex-col items-center justify-center w-[84px] py-3 rounded-xl bg-surface-container-low text-on-surface font-semibold active:scale-95 transition-all" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Quinta</span>
+<span class="font-headline-sm text-headline-sm font-bold my-0.5">17</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Out</span>
+</button>
+</div>
+<!-- Período / Turno -->
+<div class="mt-2">
+<span class="block font-label-md text-label-md text-on-surface mb-2 font-semibold">Período de preferência:</span>
+<div class="grid grid-cols-3 gap-2" id="time-period-selector">
+<button class="time-pill p-3 rounded-xl min-h-touch-target-min bg-primary text-on-primary flex flex-col items-center justify-center text-center shadow-sm active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px] mb-0.5">wb_sunny</span>
+<span class="font-label-md text-label-md font-bold">Manhã</span>
+<span class="font-label-sm text-label-sm text-primary-fixed text-[11px]">08h às 12h</span>
+</button>
+<button class="time-pill p-3 rounded-xl min-h-touch-target-min bg-surface-container-low text-on-surface flex flex-col items-center justify-center text-center active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px] mb-0.5 text-on-surface-variant">wb_twilight</span>
+<span class="font-label-md text-label-md font-bold">Tarde</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[11px]">13h às 17h</span>
+</button>
+<button class="time-pill p-3 rounded-xl min-h-touch-target-min bg-surface-container-low text-on-surface flex flex-col items-center justify-center text-center active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px] mb-0.5 text-on-surface-variant">schedule</span>
+<span class="font-label-md text-label-md font-bold">Dia Todo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[11px]">08h às 17h</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 5. DETALHES IMPORTANTES -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">checklist</span>
+          Detalhes importantes
+        </h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+          Para que a profissional vá preparada com os cuidados certos.
+        </p>
+</div>
+<!-- Checkboxes estilizados grandes -->
+<div class="flex flex-col gap-2.5">
+<label class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low cursor-pointer active:scale-[0.99] transition-transform">
+<input checked="" class="w-6 h-6 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex-1">
+<span class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[20px]">pets</span>
+              Tenho animais de estimação
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cão ou gato no local durante a faxina</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container-low cursor-pointer active:scale-[0.99] transition-transform">
+<input class="w-6 h-6 rounded text-primary focus:ring-0 accent-primary cursor-pointer" type="checkbox"/>
+<div class="flex-1">
+<span class="font-label-md text-label-md text-on-surface font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">stairs</span>
+              Possui escadas ou segundo piso
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ajuda no cálculo de tempo e esforço físico</span>
+</div>
+</label>
+</div>
+<!-- Campo de observação -->
+<div class="mt-1">
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="obs-input">
+          Alguma orientação especial? (Opcional)
+        </label>
+<textarea class="w-full p-3 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-highest transition-colors resize-none" id="obs-input" placeholder="Ex: Dar atenção especial ao forno, ou chave na portaria..." rows="2"></textarea>
+</div>
+</section>
+<!-- 6. RESUMO DO PEDIDO & ESTIMATIVA TRANSPARENTE -->
+<section class="bg-gradient-to-br from-primary-fixed/40 via-surface-container to-secondary-container/20 rounded-2xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<div>
+<span class="block font-label-sm text-label-sm text-on-surface-variant uppercase font-bold tracking-wider">Estimativa justa</span>
+<span class="block font-headline-md text-headline-md text-primary font-black">R$ 130 – R$ 150</span>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary">hourglass_bottom</span>
+            4 a 5 horas
+          </span>
+</div>
+</div>
+<div class="pt-3 flex items-start gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px] flex-shrink-0 mt-0.5">verified_user</span>
+<p class="font-label-sm text-label-sm leading-tight text-on-surface">
+<strong>Sem surpresas no bolso:</strong> O valor exato é definido na próxima etapa e você só confirma o pagamento após ver as avaliações da profissional.
+        </p>
+</div>
+</section>
+<!-- 7. BOTÃO DE AÇÃO PRINCIPAL -->
+<div class="pt-2">
+<button class="w-full min-h-touch-target-min rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/25 hover:bg-primary-container active:scale-[0.98] transition-all" type="button">
+<span>Ver Profissionais Disponíveis (3 na região)</span>
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-4 mt-3 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">security</span>
+          Profissionais verificadas
+        </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">chat</span>
+          Suporte humanizado
+        </span>
+</div>
+</div>
+</form>
+</div>
+<script>
+  // Stepper logic for Rooms & Bathrooms
+  (function initSteppers() {
+    let rooms = 2;
+    let baths = 1;
+
+    const roomDisplay = document.getElementById('room-count');
+    const bathDisplay = document.getElementById('bath-count');
+
+    document.getElementById('btn-minus-rooms')?.addEventListener('click', () => {
+      if (rooms > 1) {
+        rooms--;
+        roomDisplay.textContent = rooms;
+      }
+    });
+
+    document.getElementById('btn-plus-rooms')?.addEventListener('click', () => {
+      if (rooms < 8) {
+        rooms++;
+        roomDisplay.textContent = rooms;
+      }
+    });
+
+    document.getElementById('btn-minus-baths')?.addEventListener('click', () => {
+      if (baths > 1) {
+        baths--;
+        bathDisplay.textContent = baths;
+      }
+    });
+
+    document.getElementById('btn-plus-baths')?.addEventListener('click', () => {
+      if (baths < 6) {
+        baths++;
+        bathDisplay.textContent = baths;
+      }
+    });
+  })();
+
+  // Toggle selection on property type pills
+  const propertyPills = document.querySelectorAll('.property-pill');
+  propertyPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      propertyPills.forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        p.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+      });
+      pill.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+      pill.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+    });
+  });
+
+  // Toggle selection on service cards
+  const serviceCards = document.querySelectorAll('.service-card');
+  serviceCards.forEach(card => {
+    card.addEventListener('click', () => {
+      serviceCards.forEach(c => {
+        c.classList.remove('bg-primary-fixed/20');
+        c.classList.add('bg-surface-container-low');
+        const iconWrap = c.querySelector('.w-7');
+        if (iconWrap) {
+          iconWrap.className = 'w-7 h-7 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center opacity-40';
+          iconWrap.innerHTML = '<span class="material-symbols-outlined text-[18px]">circle</span>';
+        }
+      });
+      card.classList.remove('bg-surface-container-low');
+      card.classList.add('bg-primary-fixed/20');
+      const iconWrap = card.querySelector('.w-7');
+      if (iconWrap) {
+        iconWrap.className = 'w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center';
+        iconWrap.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span>';
+      }
+    });
+  });
+
+  // Toggle selection on time pills
+  const timePills = document.querySelectorAll('.time-pill');
+  timePills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      timePills.forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+        p.classList.add('bg-surface-container-low', 'text-on-surface');
+        const icon = p.querySelector('.material-symbols-outlined');
+        if (icon) icon.classList.add('text-on-surface-variant');
+      });
+      pill.classList.remove('bg-surface-container-low', 'text-on-surface');
+      pill.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      const icon = pill.querySelector('.material-symbols-outlined');
+      if (icon) icon.classList.remove('text-on-surface-variant');
+    });
+  });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-touch-target-min text-on-surface-variant transition-colors hover:text-on-surface" data-path="inicio" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Início</span></a><a aria-current="page" class="flex flex-col items-center justify-center -mt-5 text-primary font-bold" data-path="pedir-limpeza" href="#"><div class="w-14 h-14 rounded-full bg-primary text-on-primary shadow-lg shadow-primary/30 flex items-center justify-center transition-transform active:scale-95 hover:bg-primary-container"><span class="material-symbols-outlined text-[28px]">add_task</span></div><span class="font-label-sm text-label-sm text-primary font-semibold mt-1">Pedir</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-touch-target-min text-on-surface-variant transition-colors hover:text-on-surface" data-path="minhas-limpezas" href="#"><span class="material-symbols-outlined text-[24px]">cleaning_services</span><span class="font-label-sm text-label-sm">Limpezas</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[64px] min-h-touch-target-min text-on-surface-variant transition-colors hover:text-on-surface" data-path="perfil" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-sm text-label-sm">Perfil</span></a></div></nav></body></html>
