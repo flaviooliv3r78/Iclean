@@ -4,15 +4,15 @@ MVP de uma plataforma para aproximar pessoas que precisam de serviços de limpez
 
 ## Estrutura
 
-- `stitch_plataforma_iclean_mvp/iclean-native/`: aplicativo móvel feito com Expo e React Native.
-- `stitch_plataforma_iclean_mvp/landing_page_iclean_desktop/`: protótipo da página inicial para desktop.
-- `stitch_plataforma_iclean_mvp/landing_page_iclean_mobile/`: protótipo da página inicial para dispositivos móveis.
-- `stitch_plataforma_iclean_mvp/login_e_acesso_iclean_mobile/`: protótipo de login e acesso.
-- `stitch_plataforma_iclean_mvp/profissionais_dispon_veis_iclean_mobile/`: busca e listagem de profissionais.
-- `stitch_plataforma_iclean_mvp/solicitar_limpeza_iclean_mobile/`: fluxo de solicitação de limpeza.
-- `stitch_plataforma_iclean_mvp/painel_da_diarista_dona_s_nia_iclean/` e `stitch_plataforma_iclean_mvp/perfil_da_profissional_dona_s_nia_iclean/`: painel e perfil da profissional.
-- `stitch_plataforma_iclean_mvp/splash_screen_iclean_mobile/`: protótipo da tela de abertura.
-- `stitch_plataforma_iclean_mvp/iclean/DESIGN.md`: tokens e diretrizes visuais.
+- `projeto_iclean/iclean-native/`: aplicativo móvel feito com Expo e React Native.
+- `projeto_iclean/landing_page_iclean_desktop/`: protótipo da página inicial para desktop.
+- `projeto_iclean/landing_page_iclean_mobile/`: protótipo da página inicial para dispositivos móveis.
+- `projeto_iclean/login_e_acesso_iclean_mobile/`: protótipo de login e acesso.
+- `projeto_iclean/profissionais_dispon_veis_iclean_mobile/`: busca e listagem de profissionais.
+- `projeto_iclean/solicitar_limpeza_iclean_mobile/`: fluxo de solicitação de limpeza.
+- `projeto_iclean/painel_da_diarista_dona_s_nia_iclean/` e `projeto_iclean/perfil_da_profissional_dona_s_nia_iclean/`: painel e perfil da profissional.
+- `projeto_iclean/splash_screen_iclean_mobile/`: protótipo da tela de abertura.
+- `projeto_iclean/iclean/DESIGN.md`: tokens e diretrizes visuais.
 
 As telas HTML podem ser abertas diretamente no navegador. A landing page para dispositivos móveis usa `styles.css`.
 
@@ -21,7 +21,7 @@ As telas HTML podem ser abertas diretamente no navegador. A landing page para di
 Requisitos: Node.js e npm.
 
 ```bash
-cd stitch_plataforma_iclean_mvp/iclean-native
+cd projeto_iclean/iclean-native
 npm install
 npm run start
 ```
